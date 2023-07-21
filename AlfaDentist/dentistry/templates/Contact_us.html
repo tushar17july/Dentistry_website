@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us{% endblock title %}
+{% block body %}<div class="container">
+    <main>
+        <br>
+      <div class="py-5 text-center"  style="background-color: #e3f2fd;">
+        <img class="d-block mx-auto mb-4" src="/static/tooth1.png" alt="" width="72" height="57">
+        <h2>Contact Us</h2>
+            <ul class="yyyy text-center">
+                <li><b>Contact no:</b>+91 9987 211231</li>
+                <li><b>E-mail id:</b> AlfaDentistry@AlfaDentistry.com</li>
+                <li><b>Address:</b>21-A ,Industrial Area,East PritamPura,New delhi,110088</li>
+                <li><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d55992.517260823035!2d77.09170087438409!3d28.703633241640567!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03d5b0619f3f%3A0x2208402cf282fb02!2sPitampura%2C%20New%20Delhi%2C%20Delhi!5e0!3m2!1sen!2sin!4v1689918506600!5m2!1sen!2sin" width="200" height="150" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></li>
+            </ul>
+      </div>
+      <div class="col-md-5 p-lg-5 mx-auto my-5 wxy">
+        <div class="colss">
+          <div class="py-5 text-center">
+          <h4 class="mb-3">Share Your Feedback/Query</h4>
+          <form method="post" action='contact'  >
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-sm-6">
+                <label for="firstName" class="form-label">First name</label>
+                <input type="text" class="form-control" name ="firstName" id="firstName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid first name is required.
+                </div>
+              </div>
+  
+              <div class="col-sm-6">
+                <label for="lastName" class="form-label">Last name</label>
+                <input type="text" class="form-control" name ="lastName" id="lastName" placeholder="" value="" required="">
+                <div class="invalid-feedback">
+                  Valid last name is required.
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email" class="form-label">Email </label>
+                <input type="email" class="form-control" name ="email" id="email" placeholder="you@example.com">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="phone" class="form-label">Phone </label>
+                <input type="tel" class="form-control" name="phone" id="phone" placeholder="999999999">
+                <div class="invalid-feedback">
+                  Please enter a valid email address.
+                </div>
+              </div>
+              <div class="col-12">
+                <label for="address" class="form-label">Feedback/Query</label>
+                <input type="text" class="form-control" name="Feedback" id="Feedback" placeholder="Please enter your Feedback/Query." required="">
+                <div class="invalid-feedback">
+                  Please enter valid Feedback/Query.
+                </div>
+              </div>
+  
+            </div>
+            <hr class="my-4">
+            <button class="w-100 btn btn btn-outline-info btn-lg" type="submit">Share</button>
+            
+          </form>
+          <br>
+        </div>
+      </div>
+    </div>
+</div>
+ 
+    </main>
+  </div>{% endblock body %}
